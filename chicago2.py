@@ -4,7 +4,7 @@ import numpy as np
 import pydeck as pdk
 
 
-df = pd.read_csv("chicagodata.csv")
+df = pd.read_csv("https://github.com/farazyounus11/chicagocrime/blob/main/chicagodata.csv")
 
 # Convert 'Date' column to datetime format
 df['Date'] = pd.to_datetime(df['Date'])
