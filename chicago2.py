@@ -41,9 +41,6 @@ selected_descriptions = st.sidebar.multiselect(
     default=descriptions
 )
 
-# Display selected filters
-st.sidebar.write("Selected start date:", selected_start_date)
-st.sidebar.write("Selected end date:", selected_end_date)
 
 
 # Filter DataFrame based on selected date range, crime types, and descriptions
