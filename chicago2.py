@@ -30,7 +30,7 @@ crime_types = df['Primary Type'].unique()
 selected_crime_types = st.sidebar.multiselect(
     "Select crime types",
     crime_types,
-    default=crime_types
+    default=None
 )
 
 # NEW: Select descriptions based on the filtered crime types
