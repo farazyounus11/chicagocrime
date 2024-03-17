@@ -102,13 +102,13 @@ with col1:
 with col2:
     st.metric(label="Arrest Rate", value=(true_arrest_count/number_of_crimes)*100)
 
-monthly_counts = df.groupby(df['Date'].dt.month).size()
+monthly_counts = filtered_df.groupby(filtered_df['Date'].dt.month).size()
 
 # Plotting the line chart
 monthly_counts.plot(kind='line', figsize=(10, 6), marker='o', linestyle='-')
 plt.title('Total Crimes Committed by Month')
 plt.xlabel('Month')
 plt.ylabel('Total Crimes')
-plt.xticks(range(1, 13), ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'])
+plt.xticks(range(1, 13))
 plt.grid(True)
 plt.show()
