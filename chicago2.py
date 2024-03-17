@@ -54,8 +54,8 @@ filtered_df = df[
     (df['Description'].isin(selected_descriptions))
 ]
 
-st.markdown("# Chicago Crime Visualization by Faraz Younus")
-st.markdown("## This data is from Kaggle. The time line of the data is from 2012-2016")
+st.markdown("## Chicago Crime Visualization by Faraz Younus")
+st.markdown("### This data is from Kaggle. The time line of the data is from 2012-2016")
 
 
 st.write(filtered_df)
@@ -101,14 +101,3 @@ with col1:
     st.metric(label="Number of Crimes", value=number_of_crimes)
 with col2:
     st.metric(label="Arrest Rate", value=(true_arrest_count/number_of_crimes)*100)
-
-monthly_counts = filtered_df.groupby(filtered_df['Date'].dt.month).size()
-
-# Plotting the line chart
-monthly_counts.plot(kind='line', figsize=(10, 6), marker='o', linestyle='-')
-plt.title('Total Crimes Committed by Month')
-plt.xlabel('Month')
-plt.ylabel('Total Crimes')
-plt.xticks(range(1, 13))
-plt.grid(True)
-plt.show()
