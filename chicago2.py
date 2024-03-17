@@ -51,8 +51,6 @@ filtered_df = df[
     (df['Description'].isin(selected_descriptions))
 ]
 
-st.markdown("## Chicago Crime Visualization by Faraz Younus")
-st.markdown("### This data is from Kaggle. The time line of the data is from 2012-2016")
 
 
 st.write(filtered_df)
